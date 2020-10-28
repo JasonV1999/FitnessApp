@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackbackground"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/enterEmail"
+            android:layout_width="280dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-40dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.311" />
+
+        <EditText
+            android:id="@+id/enterPassword"
+            android:layout_gravity="center"
+            android:layout_width="280dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="109dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="-70dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#F56200"
+            android:text="@string/log_in"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.208"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.668" />
+
+        <Button
+            android:id="@+id/btnNewProfile"
+            android:layout_width="109dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/new_profile"
+            android:textAllCaps="false"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.774"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.665" />
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:layout_marginStart="0dp"
+            android:text="@string/Welcome"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signout"
+        android:backgroundTint="#F56200"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDetails"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="230dp"
+            android:text="@string/cancel"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="-50dp"
+            android:layout_marginTop="230dp"
+            android:text="@string/add"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="60dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/your_current_weight"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="110dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/your_current_height"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="160dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radMale"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="210dp"
+            android:checked="true"
+            android:text="@string/male"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="210dp"
+            android:text="@string/female"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radOther"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="210dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/txtOther"
+            android:layout_width="81dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="210dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:enabled="false"
+            android:hint="@string/other"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numCalory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="260dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/your_current_calory_intake"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numGoalWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="310dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/goal_weight"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/numGoalCalory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="360dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/goal_calory_intake"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <RadioGroup
+            android:id="@+id/radGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/lblWeight"
+            android:layout_width="77dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/kg"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblHeight"
+            android:layout_width="77dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="110dp"
+            android:text="@string/cm"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblCalories"
+            android:layout_width="98dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="260dp"
+            android:text="@string/calories"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblGoalWeight"
+            android:layout_width="77dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="310dp"
+            android:text="@string/goal_kg"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblGoalCalories"
+            android:layout_width="103dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="360dp"
+            android:text="@string/goal_calories"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switchConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/metric_system"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="278dp"
+            android:layout_height="34dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="100dp"
+            android:text="@string/you_will_have_to_click_add_to_apply_changes"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvOptions"
+        android:layout_width="match_parent"
+        android:layout_height="652dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="190dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="200dp"
+            android:text="@string/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.173" />
+
+        <Button
+            android:id="@+id/btnDailyFood"
+            android:layout_width="190dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="#F56200"
+            android:text="@string/pictures"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.259" />
+
+        <Button
+            android:id="@+id/btnDailyWeight"
+            android:layout_width="190dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:text="@string/daily_weight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintVertical_bias="0.345" />
+
+        <Button
+            android:id="@+id/btnDetails"
+            android:layout_width="190dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-100dp"
+            android:text="@string/edit_add_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.437" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDaily"
+        android:layout_width="419dp"
+        android:layout_height="252dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525">
+
+        <TextView
+            android:id="@+id/txtKilogram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="110dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:text="@string/kg"
+            android:textSize="18sp" />
+
+        <CalendarView
+            android:id="@+id/dateCurrent"
+            android:layout_width="363dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp" />
+
+        <Button
+            android:id="@+id/btnAddDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="70dp"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_marginTop="150dp"
+            android:text="@string/add_daily" />
+
+        <Button
+            android:id="@+id/btnCancelDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="150dp"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_marginEnd="70dp"
+            android:text="@string/cancel_daily" />
+
+        <EditText
+            android:id="@+id/numTodayWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:hint="@string/today_s_current_weight"
+            android:inputType="number" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvProfile"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525">
+        <Button
+            android:id="@+id/btnReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/back" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#F56200"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/edit" />
+
+        <TextView
+            android:id="@+id/txtWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/starting_weight"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/txtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:text="@string/your_current_height"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_marginTop="100dp"
+            android:text="@string/your_age"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="52dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:text="@string/gender"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtCaloryIntake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="28dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:layout_marginBottom="-10dp"
+            android:text="@string/calory_intake"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtGoalWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="33dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:text="@string/your_goal_weight"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtGoalCaloryIntake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="260dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:text="@string/your_goal_calory_intake"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
